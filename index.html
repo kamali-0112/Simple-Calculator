@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url("Symblos.png");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+
+    .calculator {
+        background: #161616;
+        background-size: cover;
+        padding: 3px;
+        border-radius: 10px;
+        box-shadow: 0px 10px 10px rgba(0,0,0,0.3);
+    }
+    .img{
+        background-image: url("Symbols.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .display {
+        color: rgb(114, 18, 203);
+        font-size: 2rem;
+        padding: 15px;
+        border-radius: 0px;
+        text-align: right;
+        margin-bottom: 0px;
+        height: 400px;
+        overflow-x: auto;
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 55px);
+        gap: 10px;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 10px;
+        background: #e6cf858a;
+        color: rgb(15, 83, 88);
+        cursor: pointer;
+        transition: 0.2s;
+        box-shadow: 0px 4px 8px rgba(169, 129, 77, 0.3);
+
+    }
+
+    button:hover {
+        background: hsl(96, 32%, 63%);
+    }
+    .value{
+        width:240px;
+        height: 50px;
+        margin-bottom: 10px;
+        font-size: 40px;
+        align-content: right;
+        border: #e9dfdf;
+        background-color:#a7d2de ;
+    }
+
+    .color{
+        color: rgba(4, 255, 0, 0.875);
+        font-style: bold;
+    }
+    .color2{
+        color: white;
+        background-color:rgb(230, 0, 255);
+        width: 110px;
+    }
+
+</style>
+<body>
+    <img class="Symbols.png" alt="">
+
+    <div class="calculator">
+        <div class="display" id="display">
+    <input class="value"type="text" id="input">
+
+     <div class="buttons">
+    <button class="color" id="AC" >AC</button>
+     <button class="color"id="del" >Del</button>
+    <button class="color" id="a%" value="%">%</button>
+    <button  class="color"id="a/" value="/">/</button>
+
+    <button id="a7" value="7">7</button>
+    <button id="a8" value="8">8</button>
+    <button id="a9" value="9">9</button>
+    <button class="color" id="a*" value="*">x</button>
+
+    <button id="a4" value="4">4</button>
+    <button id="a5" value="5">5</button>
+    <button id="a6" value="6">6</button>
+    <button class="color" id="a-" value="-">-</button>
+
+
+    <button id="a1" value="1">1</button>
+    <button id="a2" value="2">2</button>
+    <button id="a3" value="3">3</button>
+    <button class="color" id="a+" value="+">+</button>
+
+    <button id="a0" value="0">0</button>
+    <button id="a." value=".">.</button>
+    <button class="color2"id="a=" value="=">=</button>
+
+
+    </div>
+</div>
+    <script>
+
+        var input=document.getElementById("input")
+        var a1=document.getElementById("a1")
+        var a2=document.getElementById("a2")
+        var a3=document.getElementById("a3")
+        var a4=document.getElementById("a4")
+        var a5=document.getElementById("a5")
+        var a6=document.getElementById("a6")
+        var a7=document.getElementById("a7")
+        var a8=document.getElementById("a8")
+        var a9=document.getElementById("a9")
+        var a0=document.getElementById("a0")
+        var add=document.getElementById("a+")
+        var sub=document.getElementById("a-")
+        var mul=document.getElementById("a*")
+        var div=document.getElementById("a/")
+        var sum=document.getElementById("a=")
+        var del=document.getElementById("del")
+        var AC=document.getElementById("AC")
+        var mod=document.getElementById("a%")
+        var dot=document.getElementById("a.")
+
+
+
+
+
+ a1.addEventListener("click",()=>{
+    input.value+=a1.value
+    })
+ a2.addEventListener("click",()=>{
+    input.value+=a2.value
+    })
+ a3.addEventListener("click",()=>{
+    input.value+=a3.value
+    })
+ a4.addEventListener("click",()=>{
+    input.value+=a4.value
+    })
+ a5.addEventListener("click",()=>{
+    input.value+=a5.value
+    })
+ a6.addEventListener("click",()=>{
+    input.value+=a6.value
+    })
+ a7.addEventListener("click",()=>{
+    input.value+=a7.value
+    })
+ a8.addEventListener("click",()=>{
+    input.value+=a8.value
+    })
+ a9.addEventListener("click",()=>{
+    input.value+=a9.value
+    })
+ a0.addEventListener("click",()=>{
+    input.value+=a0.value
+    })
+ add.addEventListener("click",()=>{
+    input.value+=add.value
+    })
+ sub.addEventListener("click",()=>{
+    input.value+=sub.value
+    })
+ mul.addEventListener("click",()=>{
+    input.value+=mul.value
+    })
+ div.addEventListener("click",()=>{
+    input.value+=div.value
+    })
+ sum.addEventListener("click",()=>{
+    input.value=eval(input.value)
+    })
+
+ del.addEventListener("click",()=>{
+    input.value=input.value.slice(0,-1)
+    })
+    
+ AC.addEventListener("click",()=>{
+    input.value=" "
+    })
+    mod.addEventListener("click",()=>{
+    input.value+=mod.value
+    })
+ dot.addEventListener("click",()=>{
+    input.value+=dot.value
+    })
+    </script>
+
+</input>
+
+</body>
+</html>
